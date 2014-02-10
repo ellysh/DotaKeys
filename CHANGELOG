@@ -1,0 +1,171 @@
+* L2Bot 3.4
+	- chat: Check the selected nickname by color
+	- Add the `fishing_beginner.au3` script
+	- Add mouse search support for Interlude chronicles
+
+* L2Bot 3.3
+	- functions: Use relative coordinates instead the absolute ones
+	- move: Fix bug with random movement to go around the barriers
+	- Base implementation of the mouse searching algorithm
+
+* L2Bot 3.2
+	- The repeater script have been moved to separate project
+	- Remove code to support the multi-window mode
+	- Implement English version of the chat bot configurator script
+	- Implement English version of the healer bot configurator script
+	- Enable output to the log file by default
+	- Disable the rest mechanism by default
+
+* L2Bot 3.1
+	- chat bot: Fix bug with script launching
+	- chat bot: Implement mechanism for the private messages sending
+	- Add a configurator script for the chat bot
+	- farm bot: Fix bug with long delay after the attacking action
+
+* L2Bot 3.0
+	- Implement mechanism for searching targets by macros
+	- attack: Fix bug with delay of the attack's key pressing and multi window mode
+	- functions: Fix bug with the colors mismatch in the GetPixelCoordinateClient function
+
+* L2Bot 2.9
+	- move: Implement switching to the next target while moving to target
+	- analysis: Check bot's stucking by the map window
+	- analysis: Use IsPixelsChanged function in the IsTargetDamaged one
+	- fishing: Implement switching to mob with the "/nexttarget" command
+	- healer: Follow the last healed party member
+
+* L2Bot 2.8
+	- Implement the healer bot
+
+* L2Bot 2.7
+	- Implement the multi-timeout mechanism
+
+* L2Bot 2.6
+	- Implement controlling of position with points in the mini-map
+	- Increase delays after the reel and pump actions in the fishing bot
+	- Update illustration of the interface configuration 
+	
+* L2Bot 2.5
+	- Fix bug with keys simulation for the Java servers
+	- Implement mechanism of the toggle skills usage 
+
+* L2Bot 2.4
+	- Implement the roulette bot
+
+* L2Bot 2.3
+	- Implement the repeater script
+
+* L2Bot 2.2
+	- Send text commands to the active window only
+	- Make the multi window mode disabled by default
+	- Implement auto detecting of the L2 client windows
+	- Disable multi-window keys sending for the custom script
+
+* L2Bot 2.1
+	- Implement universal farm bot for the melee classes
+	- Implement keys pressing in the multiple L2 windows
+
+* L2Bot 2.0
+	- Implement the custom script mechanism
+	
+* L2Bot 1.9.1
+	- Fix the English documentation in the README.txt file
+	- Fix the Russian documentation in the README_ru.txt file
+
+* L2Bot 1.9
+	- Implement the mana potions usage
+	- Add second nuke skill for the bot of sorcerer class
+
+* L2Bot 1.8
+	- Implement attacking mobs by the fishing bot
+	- Add English variant of the configurator scripts (with "en" suffix)
+	- Implement the Rest function for bots with the solo tactic
+
+* L2Bot 1.7
+	- Implement script pause by Pause key pressing
+	- Add random delay before next fishing
+
+* L2Bot 1.6
+	- Add configurator scripts for farm bots and fishing bot
+	- Change set of interface configuration parameters
+	- Use fish shots for each action for fishing bot
+	- Run bots by Alt+F2 key (without Alt+F3)
+	
+* L2Bot 1.5
+	- Fix the hotbar keys for all class
+
+* L2Bot 1.4
+	- Use the arrow keys instead W and S for bot moving
+	- Move to target after kill for drop picking in hawkeye and sorcerer bots
+	
+* L2Bot 1.3
+	- Add bot for the treasure hunter class
+	- Add the interface config for Interlude chronicles
+	- Add movement timeout variable to the run scripts
+	- Improve movement to target algorithm for range classes
+
+* L2Bot 1.2
+	- Fix bug with position changing by attack timeout
+	- Add bot for the hawkeye class
+	- Add bot for the bladedancer class	
+	
+* L2Bot 1.1
+	- Improve first action choosing in fishing bot
+	- Disable debug file output
+	- Merge classes tactics files and run files
+	- Add the destroyer class bot
+	- Add the gladiator class bot
+	- Add the warlock class bot
+	- Add the sorcerer class bot
+
+* L2Bot 1.0
+    - Add timeout parameters to class tactics
+    - Move runnable scripts to the 'run' directory
+
+* L2Bot 0.9
+    - Using fish shots in the fishing bot
+    - Improve fishing bot analysis for next action choosing
+    - Use whole health and mana bar position for analyze
+    - Decrease interface parameters count
+    - Add illustration images for interface parameters
+
+* L2Bot 0.8
+	- Implement fishing bot
+	- Check change position action result to success
+	- Use attack skills by spoiler and warcryer classes
+	
+* L2Bot 0.7
+	- Implement chat bot
+	- Add English target list
+	- Move the hotbar.au3 file content to control.au3 one
+	- Add Russian README file
+
+* L2Bot 0.6
+	- Use PixelSearch function instead PixelGetColor one in triggers checking functions
+	- New movement to target algorithm
+	- Add some chance to ChangePosition function
+	- Grab client window on ALT+F2 key pressing
+	- Start bot on Alt+F5 key pressing
+	- Base implemetation of second window support bot
+	- Implement attack skills usage
+	- Implement self buff for solo tactic
+
+* L2Bot 0.5
+	- Add tactics for several classes and group roles
+
+* L2Bot 0.4
+	- Improve target searching algorithm
+	- Add target health checking for attack timeout and skill usage
+	- Stop script execution on player death
+
+* L2Bot 0.3
+	- Implement pet controlling
+
+* L2Bot 0.2
+	- Implement health potion using
+
+* L2Bot 0.1 pre-alpha
+	- Target searching
+	- Attack action
+	- Attack timeout
+	- Configuration files for interface and hotbar
