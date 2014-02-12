@@ -34,8 +34,12 @@ func InitKeyHooks($handler)
 	next
 endfunc
 
-func SendClient($key)
-	$gMappedKey = $key
-	Send($key)
-	$gMappedKey = ""
+func SendClient($key, $is_mapped)
+	if $is_mapped then
+		$gMappedKey = $key
+		Send($key)
+		$gMappedKey = ""
+	else
+		Send($key)
+	endif
 endfunc

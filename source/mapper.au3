@@ -17,7 +17,7 @@ func MapKey($key)
 	; This is hack to avoid the repeating key mapping.
 	if $gMappedKey == $key then
 		LogWrite("MapKey() - skip #1: asc = " & asc($key) & " key = " & $key & @CRLF);
-		Send($key);
+		SendClient($key, false);
 		return
 	endif
 
@@ -31,14 +31,14 @@ func MapKey($key)
 		if $key = $key_map[1] then
 			for $j = 2 to $key_map[0] step 1
 				LogWrite("MapKey() - remap: asc = " & asc($key) & " key = " & $key & @CRLF);
-				SendClient($key_map[$j])
+				SendClient($key_map[$j], true)
 			next
 			return
 		endif
 	next
 
 	LogWrite("MapKey() - skip #2: asc = " & asc($key) & " key = " & $key & @CRLF);
-	Send($key)
+	SendClient($key, false)
 endfunc
 
 InitKeyHooks($gKeyHandler)
