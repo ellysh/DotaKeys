@@ -44,17 +44,7 @@ func MapKey($key)
 	Send($key)
 endfunc
 
-func InitKeyHooks()
-	for $i = 0 to 256
-		HotKeySet(Chr($i), "_KeyMapper")
-	next
-
-	for $i = 0 to 12
-		HotKeySet("{F" & $i & "}", "_KeyMapper")
-	next
-endfunc
-
-InitKeyHooks()
+InitKeyHooks("_KeyMapper")
 
 ; Main Loop
 while true

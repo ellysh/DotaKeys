@@ -7,16 +7,23 @@ global $gIsGrab = false
 Global $gIsPaused = false
 
 func _Exit()
-    exit
+	exit
 endfunc
 
 func _GrabWindow()
-    $gIsGrab = true
+	$gIsGrab = true
 endfunc
 
 func _TogglePause()
-    $gIsPaused = not $gIsPaused
-    while $gIsPaused
-        sleep(10)
-    wEnd
+	$gIsPaused = not $gIsPaused
+	
+	if $gIsPaused then
+		InitKeyHooks("")
+	else
+		InitKeyHooks("_KeyMapper")
+	endif
+	
+	while $gIsPaused
+		sleep(10)
+	wend
 endfunc
