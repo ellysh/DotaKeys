@@ -6,6 +6,8 @@ Opt("SendKeyDownDelay", 10)
 Opt("PixelCoordMode", 2)
 Opt("MouseCoordMode", 2)
 
+global $gMappedKey = ""
+
 func WaitGrabCommand()
 	while not $gIsGrab
 		Sleep(1)
@@ -28,4 +30,10 @@ func InitKeyHooks($handler)
 			HotKeySet("{F" & $i & "}")
 		endif
 	next
+endfunc
+
+func SendClient($key)
+	$gMappedKey = $key
+	Send($key)
+	$gMappedKey = ""
 endfunc

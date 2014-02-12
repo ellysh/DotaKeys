@@ -4,8 +4,6 @@
 #include "hooks.au3"
 #include "functions.au3"
 
-global $gIsMapped = false
-
 func _KeyMapper()
 	$key_pressed = @HotKeyPressed
 
@@ -17,7 +15,7 @@ endfunc
 
 func MapKey($key)
 	; This is hack to avoid the repeating key mapping.
-	if $gIsMapped then
+	if $gMappedKey == $key then
 		LogWrite("MapKey() - skip #1: asc = " & asc($key) & " key = " & $key & @CRLF);
 		Send($key);
 		return
@@ -34,7 +32,7 @@ func MapKey($key)
 			$gIsMapped = true
 			for $j = 2 to $key_map[0] step 1
 				LogWrite("MapKey() - remap: asc = " & asc($key) & " key = " & $key & @CRLF);
-				Send($key_map[$j])
+				SendClient($key_map[$j])
 			next
 			$gIsMapped = false
 			return
