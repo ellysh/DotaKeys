@@ -20,7 +20,7 @@ func _TogglePause()
 	if $gIsPaused then
 		InitKeyHooks("")
 	else
-		InitKeyHooks("_KeyMapper")
+		InitKeyHooks($gKeyHandler)
 	endif
 	
 	while $gIsPaused

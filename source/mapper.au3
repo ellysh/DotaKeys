@@ -10,7 +10,7 @@ func _KeyMapper()
 	LogWrite("_KeyMapper() - asc = " & asc($key_pressed) & " key = " & $key_pressed & @CRLF);
 	HotKeySet($key_pressed)
 	MapKey($key_pressed)
-	HotKeySet($key_pressed, "_KeyMapper")
+	HotKeySet($key_pressed, $gKeyHandler)
 endfunc
 
 func MapKey($key)
@@ -29,12 +29,10 @@ func MapKey($key)
 		local $key_map = StringSplit($keys_array[$i], ",")
 		
 		if $key = $key_map[1] then
-			$gIsMapped = true
 			for $j = 2 to $key_map[0] step 1
 				LogWrite("MapKey() - remap: asc = " & asc($key) & " key = " & $key & @CRLF);
 				SendClient($key_map[$j])
 			next
-			$gIsMapped = false
 			return
 		endif
 	next
@@ -43,7 +41,7 @@ func MapKey($key)
 	Send($key)
 endfunc
 
-InitKeyHooks("_KeyMapper")
+InitKeyHooks($gKeyHandler)
 
 ; Main Loop
 while true

@@ -6,6 +6,8 @@ Opt("SendKeyDownDelay", 10)
 Opt("PixelCoordMode", 2)
 Opt("MouseCoordMode", 2)
 
+global const $gKeyHandler = "_KeyMapper"
+
 global $gMappedKey = ""
 
 func WaitGrabCommand()
