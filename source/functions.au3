@@ -42,4 +42,8 @@ func SendClient($key, $is_mapped)
 	else
 		Send($key)
 	endif
+	
+	if $kIsAutoClick then
+		MouseClick("left")
+	endif
 endfunc
