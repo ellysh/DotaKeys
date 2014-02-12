@@ -24,6 +24,6 @@ func _TogglePause()
 	endif
 	
 	while $gIsPaused
-		sleep(10)
+		sleep(1)
 	wend
 endfunc

@@ -18,7 +18,8 @@ endfunc
 func MapKey($key)
 	; This is hack to avoid the repeating key mapping.
 	if $gIsMapped then
-		Send($key)
+		LogWrite("MapKey() - skip #1: asc = " & asc($key) & " key = " & $key & @CRLF);
+		Send($key);
 		return
 	endif
 
@@ -40,7 +41,7 @@ func MapKey($key)
 		endif
 	next
 
-	LogWrite("MapKey() - skip: asc = " & asc($key) & " key = " & $key & @CRLF);
+	LogWrite("MapKey() - skip #2: asc = " & asc($key) & " key = " & $key & @CRLF);
 	Send($key)
 endfunc
 
