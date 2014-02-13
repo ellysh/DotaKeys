@@ -1,5 +1,6 @@
 #include <WinAPI.au3>
 
+#include "../config/global.au3"
 #include "debug.au3"
 #include "hooks.au3"
 #include "functions.au3"
