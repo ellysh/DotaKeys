@@ -1,7 +1,7 @@
 ; Global hooks
-HotKeySet("!{F1}", "_Exit")
-HotKeySet("!{F2}", "_GrabWindow")
-HotKeySet("{PAUSE}", "_TogglePause")
+HotKeySet($kStartKey, "_GrabWindow")
+HotKeySet($kExitKey, "_Exit")
+HotKeySet($kPauseKey, "_TogglePause")
 
 global $gIsGrab = false
 Global $gIsPaused = false
