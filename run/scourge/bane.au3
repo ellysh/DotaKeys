@@ -4,4 +4,4 @@ global const $kKeys = "q,v|r,f"
 ; This is needed for Windows Vista and above
 #requireadmin
 
-#include "../source/mapper.au3"
+#include "../../source/mapper.au3"
