@@ -1,5 +1,5 @@
 # Lineendings
-*.au3        eol=crlf
+*        eol=crlf
 
 # Whitespace rules
 # strict (no trailing, no tabs)
