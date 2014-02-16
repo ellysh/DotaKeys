@@ -15,8 +15,12 @@ func _GrabWindow()
 endfunc
 
 func _TogglePause()
+	HotKeySet($kPauseKey)
+	Send($kPauseKey)
+	HotKeySet($kPauseKey, "_TogglePause")
+
 	$gIsPaused = not $gIsPaused
-	
+
 	if $gIsPaused then
 		InitKeyHooks("")
 	else

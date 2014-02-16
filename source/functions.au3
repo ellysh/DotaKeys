@@ -14,6 +14,10 @@ endfunc
 
 func InitKeyHooks($handler)
 	for $i = 0 to 256
+		if Chr($i) == $kPauseKey then
+			continueloop
+		endif
+
 		if $handler <> "" then
 			HotKeySet(Chr($i), $handler)
 		else
