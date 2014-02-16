@@ -1,4 +1,4 @@
-DotaKeys 0.2 version
+DotaKeys 0.3 version
 ====================
 
 1. INTRODUCTION
