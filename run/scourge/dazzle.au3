@@ -1,5 +1,5 @@
 ; String with mapping keys
-global const $kKeys = "q,t|w,g|e,d|r,w"
+global const $kKeys = "s,h|q,t|w,g|e,d|r,w"
 
 ; This is needed for Windows Vista and above
 #requireadmin
