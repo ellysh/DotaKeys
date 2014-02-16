@@ -1,2 +1,6 @@
+* DotaKeys 0.2
+	- Prepare hero key mapping for Dota 6.77c version
+	- Implement the autoclicking mechanism
+
 * DotaKeys 0.1
 	- Base implementation of the key mapper
